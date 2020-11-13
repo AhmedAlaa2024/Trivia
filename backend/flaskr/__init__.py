@@ -79,9 +79,7 @@ def create_app(test_config=None):
         formatted_questions = [question.format() for question in questions]
         current_categories = [int(question.format()['category'])
                               for question in questions]
-        print('#' * 100)
-        print(len(formatted_questions))
-        print('#' * 100)
+        
         if formatted_questions[start:end] == []:
             abort(404)
         else:
